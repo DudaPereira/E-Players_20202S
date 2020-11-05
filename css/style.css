@@ -345,7 +345,7 @@ img{
     height: 2.3125em;
     width: 12.1875em;
 }
-.sociais input[type"email"]::placeholder{
+.sociais input[type="email"]::placeholder{
     color: #B8B3B3;
     font-weight: bold;
 }
