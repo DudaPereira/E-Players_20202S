@@ -3,6 +3,7 @@
 :root{
     
     --background: #000000;
+    --bgnews: #1e1c21;
     --red: #C20000;
     --blue: #001F70;
     --gradient: linear-gradient(180deg, #000000 0%, rgba(83, 83, 83, 0.577381) 25%, rgba(196, 196, 196, 0) 87.5%);
@@ -31,11 +32,16 @@ img{
     /* background-color: aliceblue; */
 }
 .content{
-    width: 100%;
+    width: 95%;
     max-width: 75em;
     height: 100%;
     /* background-color: aqua; */
     margin: auto;
+}
+.flex-spbt-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .flex-spbt-center{
     display: flex;
@@ -79,7 +85,7 @@ img{
     top: 0;
 }
 .banner-content{
-    width: 80%;
+    width: 95%;
     height: 100%;
     /* background-color: rgba(255, 235, 205, 0.384); */
     margin: auto;
@@ -171,17 +177,17 @@ img{
     justify-content: space-between;
 }
 
-.text-about {
+.texto-about {
     width: 50%;
     text-align: justify;
 }
 
-.text-about h2 {
+.texto-about h2 {
     margin-bottom: 1em;
-    font-size: 2.1875em;
+    font-size: 2.18em;
 }
 
-.text-about p {
+.texto-about p {
     font-size: 1.25em;
 }
 
@@ -193,6 +199,10 @@ img{
     border: solid 1px #fff;
     height: 2em;
     margin-left: 1em;
+}
+.linha{
+    border: solid 1px #fff;
+    height: 3em;
 }
 .games-aovivo, .games-embreve {
     display: flex;
@@ -221,93 +231,76 @@ img{
 .time2 img{
     margin-right: 0.1em;
 }
-.noticias{
+.bg-newa{
     width: 100%;
-    height: 61.25em;
-    background-color: #1E1C21;
-}
-
-.noticias h2{
-    color: white;
-    font-size: 35px;
-    margin-left: 10%;
-    padding: 30px;
-    padding-left: 0px;
-}
-
-.content-noticias{
-    width: 80%;
-    margin: 0 10%;
-    display: flex;
-}
-
-.noticias2{
-    width: 80%;
-}
-
-.content-tabela{
-    width: 20%;
-}
-
-.bloco-noticias{
-    width: 90%;
-    margin-bottom: 4%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.bloco-noticias2{
-    width: 14.81em;
-    height: 22.87em;
-    box-shadow: 1px 1px 20px 4px #000000;
-    display: flex;
-    flex-direction: column;
-    transition: 0.2s;
-}
-.bloco-noticias2 p{
-    color: white;
-}
-.bloco-noticias2 h3{
-    color: white;
-}
-
-.bloco-noticias2:hover{
-    transform: scale(1.1);
-}
-.tabela-times{
-    width: 14.50em;
-    height: 8,80em;
-    color: white;
-    margin-bottom: 0.62em;
-    padding: 0.62em 0em;
-    border: 4px solid  #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.1s;
-}
-.tabela-times:hover{
-    border: 4px solid #000000;;
-}
-.tabela-times p{
-    padding-top: 0.5em;
-}
-.tabela1{
-    width: 13.75em;
     height: auto;
+    background-color: var(--bgnews);
+}
+.news{
+    width: 70%;
+    height: 90%;
+}
+.news h2, .next-games h2{
+    color: white;
+    margin: 1em 0em;
+    font-size: 2.1875em;
+}
+.next-games{
+    width: 25%;
+    height: 90%;
+}
+.content-news{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardnews{
+    width: 15em;
+    height: 22,5em;
+    background-color: var(--gradient);
+    color: white;
+    margin-bottom: 2em;
+    box-shadow: 0px 0px 10px rgb(97, 97, 97), 0px 0px 30px rgb(0, 0, 0);
+}
+.cardnews h3{
+    padding: 0.5em 0.6em;
+}
+.cardnews p{ 
+    padding: 0em 0.6em;
+}
+.next-games-bg{
+    width: 90%;
+    height: auto;
+    background: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.4em 0;
+}
+.next-games-match{
+    width: 100%;
+    height: 6.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+}
+.teams{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.next-games-match div{
     display: flex;
     align-items: center;
 }
-.tabela1 p{
-    color: white;
-    margin-top: 0.62em;
-    margin-top: 0;
+.next-games-match img{
+    max-width: 2.5em;
 }
-.tabela1 .img{
-    position: absolute;
-    width: 40px;
-    height: 40px;
+.next-games-match > p{
+    margin-top: 1em;
 }
 .links-footer{
     width: 33%;
@@ -367,7 +360,7 @@ img{
 
 /* Até 1199px */
 @media screen and (max-width: 74.93em){
-
+    
 }
 /* Até 991px */
 @media screen and (max-width: 61.93em){
