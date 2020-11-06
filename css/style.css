@@ -71,7 +71,10 @@ img{
     text-shadow: 0 0 20px #fff;
     text-decoration: underline;
 }
-#menu-bars{
+#header-bars{
+    display: none;
+}
+.menu-cabecalho-response{
     display: none;
 }
 .banner{
@@ -194,43 +197,50 @@ img{
 .content-about img {
     max-width: 31.875em;
 }
-.games-aovivo::after{
-    content: '';
-    border: solid 1px #fff;
-    height: 2em;
-    margin-left: 1em;
-}
-.linha{
-    border: solid 1px #fff;
-    height: 3em;
-}
-.games-aovivo, .games-embreve {
-    display: flex;
+.partidas{
     color: white;
-    align-items: center;
-    font-size: 1.80em;
-    justify-content: space-between;
+    width: 100%;
+    height: 7.5em;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
 }
-.partida{
-    width: 9.5em;
+
+.content-partidas{
+    width: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 1em;
 }
-.time1, .time2{
+
+.ao-vivo{
+    width: 30%;
+    margin: 0 6%;
+    display: flex;
+}
+
+.proximas-partidas{
+    width: 70%;
+    display: flex;
+}
+
+.ao-vivo h2, .proximas-partidas h2{
+    margin-right: 15px;
+    text-transform: uppercase;
+}
+
+.confrontos{
     display: flex;
     align-items: center;
+    padding: 10px;
+    border: 4px solid white;
+    transition: 0.2s;
+    opacity: 1;
+}
+.confrontos p, img{
+    padding: 0 1px;
 } 
-.partida img{
-    width: 1.8em;
-}
-.time1 img{
-    margin-left: 0.1em;
-}
-.time2 img{
-    margin-right: 0.1em;
-}
+
 .bg-newa{
     width: 100%;
     height: auto;
@@ -302,60 +312,73 @@ img{
 .next-games-match > p{
     margin-top: 1em;
 }
-.links-footer{
-    width: 33%;
-    display: flex;
-    justify-content: space-around;
-}
-.links{
-    color: white;
-}
-.links a{
-    text-decoration: none;
-    color: white;
-}
-.rodape{
-    margin-top: 2em;
-    padding: 1em 0;
-}
-.logo-rodape{
-    width: 19.05em;
-}
-.sociais h2{
-    color: white;
-}
-.sociais > h2{
-    font-size: 0.875em;
-}
-.siga-nos{
-    display: flex;
-    align-items: center;
-}
-.sociais form{
-    display: flex;
-}
-.sociais input[type="email"]{
-    height: 2.3125em;
-    width: 12.1875em;
-}
-.sociais input[type="email"]::placeholder{
-    color: #B8B3B3;
-    font-weight: bold;
-}
-.sociais input[type="sutmit"]{
-    width: 9.75em;
-    background-color: #8326EF;
-    color: white ;
-    font-size: 1.1em;
-    font-family: var(--font);
-}
-.siga-nos{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0.8em;
+.footer{
+    width: 100%;
+    height: 10em;
 }
 
+.footer-flex{
+    /* background-color: blue; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: white;
+}
+
+.footer-links{
+    /* background-color: rgb(143, 110, 66); */
+    height: 100%;
+    width: 100px;
+}
+
+.footer-links ul, a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.footer-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-img img{
+    max-width: 20em;
+}
+
+.footer-img p{
+    padding-top: 15px;
+}
+
+.footer-direitos{
+    justify-items: center;
+}
+
+.footer-direitos a{
+ padding: 0px 20px;
+ display: flex;
+ flex-direction: column;
+ font-size: 20px;
+}
+
+.footer-links a:hover{
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.footer-img a:hover{
+    color: var(--red);
+}
+
+.footer-direitos a:hover{
+    color: var(--red);
+}
 
 
 /* Até 1199px */
@@ -364,13 +387,157 @@ img{
 }
 /* Até 991px */
 @media screen and (max-width: 61.93em){
+    .cabecalho img{
+        width: 100%;
+        max-width: 15em;
+        display: block;
+    }
+
+    .content{
+        width: 93%;
+    }
+
+    .flex-content{
+        justify-content: space-between;
+    }
+    
+    .menu-cabecalho {
+        display: none;
+    }
+    
+    #header-bars{
+        display: inline;
+        font-size: 40px;
+        color: white;
+    }
+
+    .menu-cabecalho-response {
+        display: none;
+    }
+
+    .menu-cabecalho-response a{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0.4em 0.22em;
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+        transition: 0.1s;
+        border: 2px solid rgb(194, 0, 0, 0.3);
+    }
+
+    .menu-cabecalho-response a:hover{
+        border: 2px solid rgb(194, 0, 0, 1);
+    }
+
     
 }
 /* até 767px */
 @media screen and (max-width: 47.93em){
-   
+    .header-top img{
+        max-width: 14em;
+    }
+    .banner-content{
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .banner-text{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+    }
+    .banner-container{
+        width: 100%;
+        height: 22.857em;
+        position: absolute;
+        top: 0;
+        background-color: #130813ad;
+    }
+    .banner-text h1{
+        font-size: 3.3em;
+    }
+    .banner-text p{
+        font-size: 1em;
+    }
+    .banner-text a{
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1.5em;
+        margin-top: 30px;
+        background-color: var(--red);
+        border-radius:  0.7em;
+        font-size: 1.7em;
+    }
+    .games{
+        width: 100%;
+        height: 7em;
+    }
+    .games img{
+        max-height: 65px;
+        max-width: 8.4em;
+    }
+    
+
+    .content-about img{
+        display: none;
+        height: 100%;
+    }
+
+    .text-about {
+        width: 80%;
+        text-align: justify;
+        margin: 10%;
+    }
 }
 /* Até 576px */
 @media screen and (max-width: 36em){
+    .content img{
+        width: 45%;
+    }
+    #header-bars{
+        font-size: 25px;
+    }
 
+     .banner{
+        height: auto;
+     }
+
+     .banner-text{
+         height: 190px;
+         margin: 40px 0;
+     }
+
+    .banner-text h1{
+        font-size: 50px;
+    }
+
+    .banner-text p{
+        font-size: 16px;
+    }
+
+    .banner-text a{
+        font-size: 25px;
+        padding: 5px 30px;
+        top: 20px;
+    }
+
+    .games{
+        height: auto;
+    }
+
+    .content-games{
+        margin: 20px 0;
+    }
+
+    #league-legends-games{
+        display: none;
+    }
 }
