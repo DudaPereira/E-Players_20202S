@@ -233,9 +233,7 @@ img{
     display: flex;
     align-items: center;
     padding: 10px;
-    border: 4px solid white;
-    transition: 0.2s;
-    opacity: 1;
+    
 }
 .confrontos p, img{
     padding: 0 1px;
@@ -381,163 +379,55 @@ img{
 }
 
 
-/* Até 1199px */
+/* 992 Até 1199px */
 @media screen and (max-width: 74.93em){
-    
-}
-/* Até 991px */
-@media screen and (max-width: 61.93em){
-    .cabecalho img{
-        width: 100%;
-        max-width: 15em;
-        display: block;
+    .header-top > .flex-spbt-center{
+        flex-direction: column;
     }
-
-    .content{
-        width: 93%;
-    }
-
-    .flex-content{
-        justify-content: space-between;
-    }
-    
-    .menu-cabecalho {
-        display: none;
-    }
-    
-    #header-bars{
-        display: inline;
-        font-size: 40px;
-        color: white;
-    }
-
-    .menu-cabecalho-response {
-        display: none;
-    }
-
-    .menu-cabecalho-response a{
-        width: 100%;
-        display: block;
-        text-align: center;
-        padding: 0.4em 0.22em;
-        color: white;
+    .text-about p{
         font-size: 1em;
-        text-transform: uppercase;
-        transition: 0.1s;
-        border: 2px solid rgb(194, 0, 0, 0.3);
     }
-
-    .menu-cabecalho-response a:hover{
-        border: 2px solid rgb(194, 0, 0, 1);
+    .bg-news .flex-spbt-center{
+        align-items: flex-start;
     }
-
-    
 }
-/* até 767px */
-@media screen and (max-width: 47.93em){
-    .header-top img{
-        max-width: 14em;
-    }
-    .banner-content{
-        align-items: center;
-        width: 80%;
-        height: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: center;
+/* 768 Até 991px */
+@media screen and (max-width: 61.93em){
+    .menu{
+       width: 109%;
     }
     .banner-text{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: white;
-    }
-    .banner-container{
-        width: 100%;
-        height: 22.857em;
-        position: absolute;
-        top: 0;
-        background-color: #130813ad;
-    }
-    .banner-text h1{
-        font-size: 3.3em;
-    }
-    .banner-text p{
-        font-size: 1em;
-    }
-    .banner-text a{
-        color: white;
-        text-decoration: none;
-        padding: 0.5em 1.5em;
-        margin-top: 30px;
-        background-color: var(--red);
-        border-radius:  0.7em;
-        font-size: 1.7em;
-    }
-    .games{
-        width: 100%;
-        height: 7em;
+        font-size: 55%;
     }
     .games img{
-        max-height: 65px;
-        max-width: 8.4em;
+        width: 90%;
     }
-    
-
+    .text-about p{
+        font-size: 1em;
+    }
     .content-about img{
-        display: none;
-        height: 100%;
-    }
-
-    .text-about {
-        width: 80%;
-        text-align: justify;
-        margin: 10%;
+        max-width: 20.875em;
     }
 }
-/* Até 576px */
-@media screen and (max-width: 36em){
-    .content img{
-        width: 45%;
+/*576  até 767px */
+@media screen and (max-width: 47.93em){
+    .header-top a{
+        font-size: 15px;
     }
-    #header-bars{
-        font-size: 25px;
+    .text-about p{
+        font-size: 1em;
     }
-
-     .banner{
-        height: auto;
-     }
-
-     .banner-text{
-         height: 190px;
-         margin: 40px 0;
-     }
-
-    .banner-text h1{
-        font-size: 50px;
-    }
-
-    .banner-text p{
-        font-size: 16px;
-    }
-
-    .banner-text a{
-        font-size: 25px;
-        padding: 5px 30px;
-        top: 20px;
-    }
-
-    .games{
-        height: auto;
-    }
-
-    .content-games{
-        margin: 20px 0;
-    }
-
-    #league-legends-games{
+    .content-about img{
         display: none;
+    }
+    .content-partidas{
+        width: 95%;
+        flex-direction: column;
+    }
+    .ao-vivo{
+        width: 512px;
+    }
+    .proximas-partidas{
+        width: 500px;
     }
 }
